@@ -41,15 +41,13 @@ pipeline {
                     sh 'sudo -u postgres psql'
 
                     // password enter
-                    \password postgres
-
+                    sh '\password postgres'
+                    sh 'root123'
+                    
                     // Create database
-                    CREATE database flask;
-                    \list
-                    \c flask
+                    sh 'CREATE database flask;'
 
                     // Run applicatiom
-
                     sh 'python3 app.py'
                 }
             }
