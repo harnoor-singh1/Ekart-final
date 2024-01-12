@@ -40,10 +40,10 @@ pipeline {
                     sh 'sudo apt-get install postgresql postgresql-contrib'
                     sh 'sudo -u postgres psql'
 
-                    #password enter
+                    // password enter
                     \password postgres
 
-                    #Create database
+                    // Create database
                     CREATE database flask;
                     \list
                     \c flask
