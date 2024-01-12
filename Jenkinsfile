@@ -8,6 +8,16 @@ pipeline {
             }
               
           }
+        stage('Install Python Virtual Environment') {
+            steps {
+                script {
+                    // Install Python3.10-venv using apt-get
+                    sh 'apt-get update'
+                    sh 'apt-get install -y python3.10-venv'
+                }
+            }
+        }
+
         stage('Build and Test') {
             steps {
                 script {
