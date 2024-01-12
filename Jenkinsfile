@@ -14,7 +14,6 @@ pipeline {
                     // Install Python3.10-venv using apt-get
                     sh 'sudo apt-get update'
                     sh 'sudo apt-get install -y python3.10-venv'
-                    sh 'sudo apt-get install -y python-pip'
                     sh 'python3 --version'
                 }
             }
@@ -23,9 +22,6 @@ pipeline {
         stage('Build and Test') {
             steps {
                 script {
-                    // Set up Python virtual environment
-                    sh 'python3 -m venv venv'
-                    sh '. venv/bin/activate'
 
                     // Install dependencies
                     sh 'pip install -r requirements.txt'
