@@ -14,6 +14,8 @@ pipeline {
                     // Install Python3.10-venv using apt-get
                     sh 'sudo apt-get update'
                     sh 'sudo apt-get install -y python3.10-venv'
+                    sh 'sudo apt-get install -y python-pip'
+                    sh 'python3 --version'
                 }
             }
         }
@@ -32,6 +34,23 @@ pipeline {
                     sh 'sudo apt-get update -y'
                     sh 'sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin'
                     sh 'docker -v'
+
+                    // Install Postgresql
+                    sh 'sudo apt-get update -y'
+                    sh 'sudo apt-get install postgresql postgresql-contrib'
+                    sh 'sudo -u postgres psql'
+
+                    #password enter
+                    \password postgres
+
+                    #Create database
+                    CREATE database flask;
+                    \list
+                    \c flask
+
+                    // Run applicatiom
+
+                    sh 'python3 app.py'
                 }
             }
         }
