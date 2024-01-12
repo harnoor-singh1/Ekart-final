@@ -22,7 +22,6 @@ pipeline {
             steps {
                 script {
                     // Set up Python virtual environment
-                    sudo apt install python3.10-venv
                     sh 'python3 -m venv venv'
                     sh 'source venv/bin/activate'
 
