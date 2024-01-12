@@ -6,7 +6,7 @@ from flask_migrate import Migrate
 app = Flask(__name__, static_url_path='/static', template_folder='templates')
 
 CORS(app)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:root123@localhost:5433/flask'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:root123@localhost:5432/flask'
 app.config['SECRET_KEY'] = 'your_secret_key'
 db = SQLAlchemy(app)
 
