@@ -41,7 +41,7 @@ pipeline {
                     sh 'sudo -u postgres psql'
 
                     // password enter
-                    sh '\password postgres'
+                    sh '\\password postgres'
                     sh 'root123'
                     
                     // Create database
