@@ -24,7 +24,7 @@ pipeline {
                 script {
 
                     // Install dependencies
-                    sh 'sudo apt install python-pip'
+                    sh 'sudo apt install python3-pip'
                     sh 'pip install -r requirements.txt'
 
                     // Install docker
