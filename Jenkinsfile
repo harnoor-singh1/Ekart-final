@@ -7,8 +7,7 @@ pipeline {
                 checkout scm
             }
               
-            }
-    }
+          }
         stage('Build and Test') {
             steps {
                 script {
@@ -24,4 +23,5 @@ pipeline {
                 }
             }
         }
+ }
 }
