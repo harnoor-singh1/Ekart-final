@@ -12,8 +12,8 @@ pipeline {
             steps {
                 script {
                     // Install Python3.10-venv using apt-get
-                    sh 'apt-get update'
-                    sh 'apt-get install -y python3.10-venv'
+                    sh 'sudo apt-get update'
+                    sh 'sudo apt-get install -y python3.10-venv'
                 }
             }
         }
