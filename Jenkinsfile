@@ -29,7 +29,7 @@ pipeline {
                     sh 'pip install -r requirements.txt'
 
                     // Run unit tests and generate JUnit XML report
-                    sh 'python -m unittest discover -v --junit-xml test-results.xml'
+                    sh 'python3 -m unittest discover -v --junit-xml test-results.xml'
                 }
             }
         }
