@@ -39,8 +39,6 @@ jobs:
       - name: Build Docker image
         run: docker build -t my-ekart-app .
 
-      - name: Run Tests
-
       - name: Push Docker image to Docker Hub
         uses: docker/login-action@v1
         with:
