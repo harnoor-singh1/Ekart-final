@@ -48,4 +48,4 @@ jobs:
       - name: Push Docker image
         run: |
           docker tag my-ekart-app:latest ajit0101/my-ekart-app:latest
-          docker push ajit0101/my-ekart-app:latest
+          docker push ajit0101/my-ekart-app:1.0
