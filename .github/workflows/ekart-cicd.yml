@@ -20,7 +20,7 @@ jobs:
           POSTGRES_PASSWORD: root123
         ports:
           - 5432:5432
-        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+       
 
     steps:
       - name: Checkout Repository
@@ -47,5 +47,5 @@ jobs:
 
       - name: Push Docker image
         run: |
-          docker tag my-ekart-app:latest ajit0101/my-ekart-app:latest
-          docker push ajit0101/my-ekart-app:1.0
+          docker tag my-ekart-app:latest harnoor81/my-ekart-app:latest
+          docker push harnoor81/my-ekart-app:1.0
